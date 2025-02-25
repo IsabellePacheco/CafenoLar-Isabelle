@@ -1,0 +1,167 @@
+/* importa font */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap');
+
+/* estilo geral */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* cor do cabeçalho */
+body{
+    background: #1F1517;
+    color: #FFFF;
+}
+/* fonte */
+html{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+/* link- sem decoração  */
+a{
+    text-decoration: none; 
+}
+/* lista- tirar as bolinhas  */
+ul{
+    list-style-type: none;
+}
+
+/* main- sessão principal */
+main {
+    display: flex;
+    flex-direction: column;
+}
+/* quadrado grande */
+.container {
+    background: #181012;
+    transform: translateX(100%);
+    opacity: 0;
+
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.container.slide-from-rigth {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.info {
+    max-width: 1120px;
+    height: 60vh;
+    display: flex;
+    /* linhas */
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 6rem;
+    align-items: center;
+    padding: 0rem 2rem;
+    margin: auto;
+    max-width: 1120px;
+    height: 60vh;
+    display:flex ;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 6rem;
+    align-items: center;
+    padding: 0rem 2rem;
+    margin: auto;
+    overflow: clip;
+}
+
+/* destaque */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.news {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+/* palavra NOVIDADE */
+.marrom {
+    color: #a45a49;
+}
+/* palavra EM ALTA */
+.amarelo {
+    color: #e7a80e;
+}
+
+h1{ 
+    font-family:'Montserrat', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    color: #FFF;
+}
+/* linha a baixo do titulo principal */
+hr{
+    border-color: #a45a49;
+}
+
+/* texto a baixo do titulo principal */
+.subtitle {
+    color: #c7bab3;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+.images {
+    max-width: 45%;
+    column-count: 4;
+    column-gap: 1rem;
+    margin: -1rem;
+}
+.images > figure > img {
+    width: 100px;
+    border-radius: 0.5rem;
+}
+
+/* botao  */
+
+.button {
+    width: 100%;
+    max-width: 1120px;
+    padding: 1rem;
+    margin: auto;
+    transform: translatey(-50%);
+}
+
+button {
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: #a45a49;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: #783f37;
+}
+
+
+@media screen and (max-width:768px){
+    .container{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+    .images {
+        column-count: 1;
+        column-gap: 0.5rem;
+    }
+    
+    .receitas {
+        padding-top: 0px;
+    }
+    
+    .button {
+        padding-bottom: 0px;
+    }
+}
