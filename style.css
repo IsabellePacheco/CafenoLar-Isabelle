@@ -9,4 +9,138 @@
     padding: 0px;
     box-sizing: border-box;
 }
+/* cor do cabeçalho */
+body {
+    background: #1F1517;
+    color: #FFFF;
+}
+/* fonte */
+html {
+    font-family: "Inter Tight", serif;
+    font-weight: 500;
+}
+/* link- sem decoração  */
+a {
+    text-decoration: none; 
+}
+/* lista- tirar as bolinhas  */
+ul {
+    list-style-type: none;
+}
 
+/* header */
+nav {
+    /* largura */
+    max-width: 1120px; 
+    /* centraliza/ horizontal na tela */
+    margin: auto;
+/* 1.5 preenchimento vertical (topo, base)  */
+/* 10 preenchimentos horizontal (esquerda, direita */
+    padding: 1.5rem 10rem;
+/* container flexível  */
+    display: flex; 
+/* elementos filhos como linha */
+    flex-direction: row;
+/* espaçamento entre os elementos filhos */
+    justify-content: space-between;
+}
+
+.title {
+    font-family: "Inter Tight", serif;
+    font-size: 50px;
+    font-weight: 600;
+    /* letras maiusculas */
+    text-transform: uppercase;
+}
+
+/* menu hamburguer */
+.menu-toggle {
+    /* nao exibe em telas grandes */
+    display: none;
+    cursor: pointer;
+}
+
+/* imagem do menu hamburguer(responsividade */
+
+.menu-icon {
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+.menu {
+    /* container felxivel */
+    display: flex; 
+     /*elememtos filhos em linha  */
+    flex-direction: row;
+    /* espaçamento entre elementos filhos*/
+    gap: 25px;
+     /* cor do texto para cinza */
+    color: #FFF2E780;
+    /* margem; */
+    margin-top: 20px;
+    /* esquerda */
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.menu a:hover {
+    /* muda a cor quando passa o mouse por cima */
+    color:#FFFF ;
+}
+
+.menu a:visited {
+    /* cor dos links */
+    color: #FFF2E780;
+}
+
+/* main- sessão principal */
+main {
+    display: flex;
+    flex-direction: column;
+}
+/* quadrado grande */
+.container {
+    background: #181012;
+    transform: translate(100%);
+    opacity: 0;
+}
+
+/* responsividade (telas menores que 768px */
+
+@media screen and (max-width:768px){
+    
+/* header */
+nav ul {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background: #333;
+    width: 100%;
+    overflow: hidden;
+    transition: max-heigt 0.5s;
+    z-index: 9;
+}
+
+nav ul li {
+    display: block;
+    margin: auto;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+.menu {
+    margin-left: 0px;
+}
+
+.menu-icon{
+    display: block;
+    cursor: pointer;
+    margin-right: -70px;
+}
+
+.title {
+    margin-left: -100px;
+}
+
+}
