@@ -73,7 +73,7 @@ nav{
      /*elememtos filhos em linha  */
     flex-direction: row;
     /* espaçamento entre elementos filhos*/
-    gap: 25px;
+    gap: 24px;
      /* cor do texto para cinza */
     color: #FFF2E780;
     /* margem; */
@@ -260,7 +260,7 @@ article {
 }
 
 .card-2 {
-    background: #241a1c;
+    background: #251f20;
     padding: 2rem;
     border-radius: 0.5rem;
     display: flex;
@@ -318,13 +318,13 @@ article {
 
 /* footer  */
 
-.footer {
+footer {
     padding: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    background: #23181a;
+    background: #251f20;
 }
 
 .footer-container {
@@ -350,12 +350,12 @@ article {
 /* header */
 nav ul {
     position: absolute;
-    top: 100px;
+    top: 70px;
     left: 0;
     background: #333;
     width: 100%;
     overflow: hidden;
-    transition: max-heigt 0.5s;
+    transition: max-height 0.5s;
     z-index: 9;
 }
 
@@ -391,11 +391,11 @@ nav ul li {
 }
 
 .receitas {
-    padding-top: opx;
+    padding-top: 0px;
 }
 
 .button {
-    padding-bottom: opx;
+    padding-bottom: 0px;
 }
 
 /* receitas */
