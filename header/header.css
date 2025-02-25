@@ -1,0 +1,132 @@
+/* importa font */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap');
+
+/* estilo geral */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* cor do cabeçalho */
+body{
+    background: #1F1517;
+    color: #FFFF;
+}
+/* fonte */
+html{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+/* link- sem decoração  */
+a{
+    text-decoration: none; 
+}
+/* lista- tirar as bolinhas  */
+ul{
+    list-style-type: none;
+}
+
+/* header */
+nav{
+    /* largura */
+    max-width: 1120px; 
+    /* centraliza/ horizontal na tela */
+    margin: auto;
+/* 1.5 preenchimento vertical (topo, base)  */
+/* 10 preenchimentos horizontal (esquerda, direita */
+    padding: 1.5rem 10rem;
+/* container flexível  */
+    display: flex; 
+/* elementos filhos como linha */
+    flex-direction: row;
+/* espaçamento entre os elementos filhos */
+    justify-content: space-between;
+}
+
+.title {
+    font-family: 'Teko', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    /* letras maiusculas */
+    text-transform: uppercase;
+}
+
+/* menu hamburguer */
+.menu-toggle {
+    /* nao exibe em telas grandes */
+    display: none;
+    cursor: pointer;
+}
+
+/* imagem do menu hamburguer(responsividade */
+
+.menu-icon {
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+.menu {
+    /* container felxivel */
+    display: flex; 
+     /*elememtos filhos em linha  */
+    flex-direction: row;
+    /* espaçamento entre elementos filhos*/
+    gap: 24px;
+     /* cor do texto para cinza */
+    color: #FFF2E780;
+    /* margem; */
+    margin-top: 9px;
+    /* esquerda */
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.menu a:hover {
+    /* muda a cor quando passa o mouse por cima */
+    color:#FFFF ;
+}
+
+.menu a:visited {
+    /* cor dos links */
+    color: #FFF2E780;
+}
+
+/* responsividade (telas menores que 768px */
+
+@media screen and (max-width:768px){
+    
+    /* header */
+    nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        z-index: 9;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: auto;
+        margin-top:10px;
+        margin-bottom: 10px;
+    }
+    
+    .menu {
+        margin-left: 0px;
+    }
+    
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+        margin-right: -70px;
+    }
+    
+    .title {
+        margin-left: -100px;
+    }
+}    
